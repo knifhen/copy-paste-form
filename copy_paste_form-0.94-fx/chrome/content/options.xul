@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window class="dialog"
+	title="Copy/Paste form - Options"
+	orient="vertical"
+	autostretch="always"
+	onload="onLoad();"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="chrome://copypasteform/content/options.js" />
+		
+	<!-- Original template by Jed Brown -->
+	<vbox>
+		<checkbox id="enableFeedBack" label="Enable feedback" />
+		<checkbox id="enableCacheToDisk" label="Enable cacheToDisk" />
+		<checkbox id="enableAdvancedMenu" label="Enable advanced menu. (Must restart firefox to enable advanced menu.)" />
+		<spacer flex="1" />
+		<button label="Close" oncommand="savePreferences(window);" />
+	</vbox>
+</window>

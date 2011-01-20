@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://copypasteform/content/overlay.css" type="text/css" ?>
+<overlay id="copypasteformOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://copypasteform/content/fileIO.js" />
+	<script type="application/x-javascript" src="chrome://copypasteform/content/prototype.js" />
+	<script type="application/x-javascript" src="chrome://copypasteform/content/overlay.js" />
+	
+	<popup id="contentAreaContextMenu">
+		<menuseparator id="copypasteformSeparator1"/>
+		<menu id="copyPasteFormMenu" label="Form" class="copyPasteFormClass" >
+			<menupopup id="copyPasteFormMenuPopup" onpopupshowing="loadForms(this);">
+				<menuitem id="addForm" label="Add..." onclick="openForm(event, 'addFormDialog.xul');"/>
+				<menuitem id="delForm" label="Delete..." onclick="openForm(event, 'delFormDialog.xul');"/>
+				<menuseparator id="copypasteformSeparator1"/>		
+			</menupopup>
+		</menu>
+		<menuitem id="copyForm" label="Copy form" oncommand="copyForm();" />
+		<menuitem id="pasteForm" label="Paste form" oncommand="pasteForm();" />	
+	</popup>
+</overlay>
